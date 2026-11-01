@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+￼<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -44,9 +44,31 @@
             transform: translateY(-5px);
             border-color: #00ff88;
         }
+
+        /* Matrix rain background: decorative and kept behind all content */
+        .matrix-bg {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.24;
+        }
+        body > section,
+        body > footer {
+            position: relative;
+            z-index: 1;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .matrix-bg { display: none; }
+        }
     </style>
 </head>
 <body class="font-sans antialiased selection:bg-cyber-green selection:text-black">
+    <!-- Animated Matrix-style background -->
+    <canvas id="matrix-bg" class="matrix-bg" aria-hidden="true"></canvas>
+
 
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-cyber-black/90 backdrop-blur border-b border-gray-800">
@@ -223,5 +245,78 @@
         <p>Built by Zack Macharia. Hosted on GitHub Pages.</p>
     </footer>
 
-</body>
+
+    <script>
+        (() => {
+            const canvas = document.getElementById('matrix-bg');
+            if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            const glyphs = 'アカサタナハマヤラワ012345789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]$#';
+            const fontSize = 16;
+            let columns = 0;
+            let drops = [];
+            let animationId = null;
+
+            function resizeMatrix() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = Math.floor(window.innerWidth * dpr);
+                canvas.height = Math.floor(window.innerHeight * dpr);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                columns = Math.ceil(window.innerWidth / fontSize);
+                drops = Array.from({ length: columns }, () =>
+                    Math.random() * (window.innerHeight / fontSize)
+                );
+            }
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.075)';
+                ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const char = glyphs[Math.floor(Math.random() * glyphs.length)];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+                    ctx.fillStyle = Math.random() > 0.975
+                        ? 'rgba(190, 255, 220, 0.95)'
+                        : 'rgba(0, 255, 136, 0.72)';
+                    ctx.fillText(char, x, y);
+
+                    if (y > window.innerHeight && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    } else {
+                        drops[i] += 0.55 + Math.random() * 0.45;
+                    }
+                }
+                animationId = window.requestAnimationFrame(drawMatrix);
+            }
+
+            function startMatrix() {
+                if (animationId === null && !document.hidden) {
+                    animationId = window.requestAnimationFrame(drawMatrix);
+                }
+            }
+
+            function stopMatrix() {
+                if (animationId !== null) {
+                    window.cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+
+            resizeMatrix();
+            startMatrix();
+            window.addEventListener('resize', resizeMatrix, { passive: true });
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) stopMatrix();
+                else startMatrix();
+            });
+        })();
+    </script>
+\n</body>
 </html>
