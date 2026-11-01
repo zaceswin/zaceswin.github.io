@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zack Macharia | Cybersecurity Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gray: '#1f2937',
+                            green: '#00ff88',
+                            blue: '#00e5ff'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'Consolas', 'Monaco', 'monospace'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        .glow-border {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+            transform: translateY(-5px);
+            border-color: #00ff88;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyber-green selection:text-black">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-cyber-black/90 backdrop-blur border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-mono text-xl font-bold text-cyber-green glow-text">~/zaceswin</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-mono text-sm">
+                        <a href="#about" class="hover:text-cyber-green transition-colors">./About</a>
+                        <a href="#skills" class="hover:text-cyber-green transition-colors">./Skills</a>
+                        <a href="#projects" class="hover:text-cyber-green transition-colors">./Projects</a>
+                        <a href="#contact" class="hover:text-cyber-green transition-colors">./Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto min-h-screen flex flex-col justify-center">
+        <div class="font-mono text-cyber-green mb-4">> Hello World, I am</div>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">Zack Mutitu Macharia</h1>
+        <h2 class="text-2xl md:text-4xl text-gray-400 mb-8">Cybersecurity Enthusiast & InfoSci Undergraduate.</h2>
+        <p class="max-w-2xl text-lg text-gray-400 mb-10 leading-relaxed">
+            I am a dedicated Information Science student at The Technical University of Kenya with a strong focus on vulnerability assessment, penetration testing, digital forensics, and secure software development. I bridge the gap between academic theory and practical, real-world security challenges through active CTF participation and tool development.
+        </p>
+        <div class="flex gap-4">
+            <a href="#projects" class="bg-transparent border border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-black font-mono font-bold py-3 px-6 rounded transition-all duration-300">
+                View Projects
+            </a>
+            <a href="https://github.com/zaceswin" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-mono font-bold py-3 px-6 rounded transition-all duration-300 flex items-center gap-2">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-20 bg-cyber-dark px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 font-mono flex items-center gap-3">
+                <span class="text-cyber-green">01.</span> Technical Arsenal
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-terminal mr-2"></i> OS & Programming</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> Fedora Linux / Unix</li>
+                        <li>> Termux (Android)</li>
+                        <li>> Python</li>
+                        <li>> Shell / Bash Scripting</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2 -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-shield-alt mr-2"></i> Security Tools</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> Metasploit Framework</li>
+                        <li>> Nmap / Network Analysis</li>
+                        <li>> Hydra / ffuf</li>
+                        <li>> Airgeddon</li>
+                    </ul>
+                </div>
+
+                <!-- Memberships -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-certificate mr-2"></i> Memberships & Certs</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> ISACA Student Member</li>
+                        <li>> Microsoft Cloud Computing</li>
+                        <li>> Cisco Certified (2025)</li>
+                        <li>> CyberGame Kenya (2026)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 font-mono flex items-center gap-3">
+            <span class="text-cyber-green">02.</span> Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-network-wired text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/finsecflow" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">FinSecFlow (API Security Suite)</h3>
+                <p class="text-gray-400 mb-4 flex-grow">A technical architecture blueprint for an API security suite. Maps system requirements, integrates session fingerprinting, utilizes Frida agent tracing, and defines workflow state graphs. Presented at Cyber Week Africa.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">API Security</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Frida</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Architecture</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-search text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/netshield-ir" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">NetShield-IR</h3>
+                <p class="text-gray-400 mb-4 flex-grow">An automated digital forensics tool built in Python. It utilizes programmatic forensic evidence collection utilities to streamline incident response workflows.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Digital Forensics</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Automation</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-envelope-open-text text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/phishing-analyzer" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Phishing Email Analyzer</h3>
+                <p class="text-gray-400 mb-4 flex-grow">Custom Python security tool designed to parse email headers, verify sender reputation, analyze embedded URLs, and generate an automated phishing likelihood score.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Email Sec</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">OSINT</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-bug text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/web-vuln-scanner" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Custom Web Vuln Scanner</h3>
+                <p class="text-gray-400 mb-4 flex-grow">A modular web vulnerability scanner in Python targeting applications like DVWA and OWASP Juice Shop. Implements crawler, analyzer, injector, and reporter modules.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">PenTesting</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">OWASP</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-cyber-dark px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 font-mono"><span class="text-cyber-green">03.</span> Get In Touch</h2>
+            <p class="text-gray-400 mb-10">Whether you have a question, a CTF challenge, or just want to say hi, my inbox is always open. I'll try my best to get back to you!</p>
+            
+            <a href="mailto:your.email@example.com" class="inline-block border border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-black font-mono font-bold py-3 px-8 rounded transition-all duration-300 mb-12">
+                Say Hello
+            </a>
+
+            <div class="flex justify-center gap-6 text-2xl text-gray-400">
+                <a href="https://github.com/zaceswin" target="_blank" class="hover:text-cyber-green transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" class="hover:text-cyber-blue transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" class="hover:text-cyber-blue transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm font-mono text-gray-500 border-t border-gray-800">
+        <p>Built by Zack Macharia. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
