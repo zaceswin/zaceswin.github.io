@@ -1,48 +1,376 @@
-                    <div class="text-xs uppercase tracking-wider text-gray-400 font-mono">Email</div>
-245	+
-                    <div class="mt-1 font-mono text-sm">zaceswin4@gmail.com</div>
-246	+
-                </a>
-247	+
-248	+
-                <a href="https://www.linkedin.com/in/zac-eswin-ab2594358" target="_blank" rel="noreferrer" class="block bg-cyber-gray border border-gray-700 rounded-lg p-4 hover:border-cyber-green hover:text-cyber-green transition-all duration-300">
-249	+
-                    <div class="text-cyber-blue mb-2"><i class="fab fa-linkedin"></i></div>
-250	+
-                    <div class="text-xs uppercase tracking-wider text-gray-400 font-mono">LinkedIn</div>
-251	+
-                    <div class="mt-1 font-mono text-sm">/in/zac-eswin</div>
-252	+
-                </a>
-253	+
-            </div>
-254	+
-255	+
-            <div class="flex justify-center gap-6 text-2xl text-gray-400 mt-10">
-256	+
-                <a href="https://github.com/zaceswin" target="_blank" rel="noreferrer" class="hover:text-cyber-green transition-colors"><i class="fab fa-github"></i></a>
-257	+
-                <a href="https://www.linkedin.com/in/zac-eswin-ab2594358" target="_blank" rel="noreferrer" class="hover:text-cyber-blue transition-colors"><i class="fab fa-linkedin"></i></a>
-258	+
-                <a href="mailto:zaceswin4@gmail.com" class="hover:text-cyber-blue transition-colors"><i class="fas fa-envelope"></i></a>
-239	259	
-            </div>
-240	260	
-        </div>
-241	261	
-    </section>
-￼
-￼
-@@ -318,5 +338,5 @@ <h2 class="text-3xl font-bold mb-6 font-mono"><span class="text-cyber-green">03.
-318	338	
-            });
-319	339	
-        })();
-320	340	
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zack Macharia | Cybersecurity Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#0a0a0a',
+                            dark: '#121212',
+                            gray: '#1f2937',
+                            green: '#00ff88',
+                            blue: '#00e5ff'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Fira Code"', 'Consolas', 'Monaco', 'monospace'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
     </script>
-321		-
-\n</body>
-341	+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        .glow-border {
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glow-border:hover {
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+            transform: translateY(-5px);
+            border-color: #00ff88;
+        }
+
+        /* Matrix rain background: decorative and kept behind all content */
+        .matrix-bg {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.24;
+        }
+        body > section,
+        body > footer {
+            position: relative;
+            z-index: 1;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .matrix-bg { display: none; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-cyber-green selection:text-black">
+    <!-- Animated Matrix-style background -->
+    <canvas id="matrix-bg" class="matrix-bg" aria-hidden="true"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-cyber-black/90 backdrop-blur border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-mono text-xl font-bold text-cyber-green glow-text">~/zaceswin</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-mono text-sm">
+                        <a href="#about" class="hover:text-cyber-green transition-colors">./About</a>
+                        <a href="#skills" class="hover:text-cyber-green transition-colors">./Skills</a>
+                        <a href="#projects" class="hover:text-cyber-green transition-colors">./Projects</a>
+                        <a href="#contact" class="hover:text-cyber-green transition-colors">./Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto min-h-screen flex flex-col justify-center">
+        <div class="font-mono text-cyber-green mb-4">> Hello World, I am</div>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">Zack Mutitu Macharia</h1>
+        <h2 class="text-2xl md:text-4xl text-gray-400 mb-8">Cybersecurity Enthusiast & InfoSci Undergraduate.</h2>
+        <p class="max-w-2xl text-lg text-gray-400 mb-10 leading-relaxed">
+            I am a dedicated Information Science student at The Technical University of Kenya with a strong focus on penetration testing, digital forensics, threat intelligence analysis, and governance, risk, and compliance (GRC). Currently expanding my practical expertise as an INCEPTOR Institute of Technology Cybersecurity Scholar.
+        </p>
+        <div class="flex gap-4">
+            <a href="#projects" class="bg-transparent border border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-black font-mono font-bold py-3 px-6 rounded transition-all duration-300 flex items-center gap-2">
+                View Projects
+            </a>
+            <a href="https://github.com/zaceswin" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-mono font-bold py-3 px-6 rounded transition-all duration-300 flex items-center gap-2">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-20 bg-cyber-dark px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 font-mono flex items-center gap-3">
+                <span class="text-cyber-green">01.</span> Technical Arsenal
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-terminal mr-2"></i> OS, Dev & Env</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> Fedora / Parrot OS / Omarchy</li>
+                        <li>> Termux (Android)</li>
+                        <li>> Python & Bash Scripting</li>
+                        <li>> Docker / QEMU / KVM</li>
+                        <li>> Neovim / Git Workflows</li>
+                    </ul>
+                </div>
+                
+                <!-- Skill Category 2 -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-shield-alt mr-2"></i> Security Tools</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> Metasploit / Nmap / Hydra</li>
+                        <li>> Digital Forensics Tools</li>
+                        <li>> Threat Intel (AbuseIPDB)</li>
+                        <li>> Active Remediation (iptables)</li>
+                        <li>> Airgeddon / ffuf</li>
+                    </ul>
+                </div>
+
+                <!-- Memberships -->
+                <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700">
+                    <h3 class="text-xl font-bold mb-4 text-cyber-blue"><i class="fas fa-certificate mr-2"></i> Certs & Programs</h3>
+                    <ul class="space-y-2 text-gray-300 font-mono text-sm">
+                        <li>> Mastercard Cyber Virtual Exp (Forage)</li>
+                        <li>> INCEPTOR Scholar (75% Grant)</li>
+                        <li>> HackerRank Orchestrate '26</li>
+                        <li>> CyberGame Kenya 2026</li>
+                        <li>> Cisco Certified (2025)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 font-mono flex items-center gap-3">
+            <span class="text-cyber-green">02.</span> Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-microchip text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">AutoSOC-Suite</h3>
+                <p class="text-gray-400 mb-4 flex-grow">A modular automated SOC incident response pipeline. Features real-time log ingestion, AbuseIPDB threat intelligence enrichment, and active iptables remediation for dynamic defense.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">SOC Automation</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Threat Intel</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-network-wired text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/finsecflow" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">FinSecFlow (MoMo-Sec-Suite)</h3>
+                <p class="text-gray-400 mb-4 flex-grow">A technical blueprint for mobile money and API security. Maps transaction workflow digital twins, state tracking, and uses Frida agents to analyze suspicious mobile activity.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">API Security</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Frida</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">FinTech</span>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-robot text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Autonomous Agent Framework</h3>
+                <p class="text-gray-400 mb-4 flex-grow">An autonomous agent commerce security framework developed for the HackerRank Orchestrate 2026 competition, focusing on secured, agent-driven transactional environments.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">AI Agents</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Commerce Sec</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">HackerRank</span>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-map-marked-alt text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">KPLOP (KPLC Outage Map)</h3>
+                <p class="text-gray-400 mb-4 flex-grow">A FastAPI and Leaflet web application for mapping power outages in Kenya. Utilizes automated scraping, OCR, and NLP location extraction to plot incident zones dynamically.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">FastAPI</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">NLP / OCR</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Leaflet JS</span>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-search text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/netshield-ir" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">NetShield-IR</h3>
+                <p class="text-gray-400 mb-4 flex-grow">An automated open-source digital forensics tool built in Python. It utilizes programmatic forensic evidence collection utilities to streamline incident response and investigative workflows.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Forensics</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">Automation</span>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-cyber-gray p-6 rounded-lg border border-gray-700 glow-border flex flex-col h-full">
+                <div class="flex justify-between items-center mb-4">
+                    <i class="fas fa-envelope-open-text text-3xl text-cyber-blue"></i>
+                    <a href="https://github.com/zaceswin/phishing-analyzer" target="_blank" class="text-gray-400 hover:text-cyber-green text-xl"><i class="fab fa-github"></i></a>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Phishing Email Analyzer</h3>
+                <p class="text-gray-400 mb-4 flex-grow">Custom Python tool to parse raw email headers, verify SPF/DKIM/DMARC records, query VirusTotal APIs, and execute log correlation for automated risk assessments.</p>
+                <div class="flex flex-wrap gap-2 font-mono text-xs text-cyber-green">
+                    <span class="bg-gray-800 px-2 py-1 rounded">Python</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">OSINT</span>
+                    <span class="bg-gray-800 px-2 py-1 rounded">API Integration</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-cyber-dark px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 font-mono"><span class="text-cyber-green">03.</span> Get In Touch</h2>
+            <p class="text-gray-400 mb-10">Whether you have a question, a CTF challenge, or just want to say hi, my inbox is always open. I'll try my best to get back to you!</p>
+            
+            <a href="mailto:zaceswin4@gmail.com" class="inline-block border border-cyber-green text-cyber-green hover:bg-cyber-green hover:text-black font-mono font-bold py-3 px-8 rounded transition-all duration-300 mb-8">
+                Say Hello
+            </a>
+
+            <div class="grid gap-4 sm:grid-cols-3 text-left mt-6">
+                <a href="tel:+254790399727" class="block bg-cyber-gray border border-gray-700 rounded-lg p-4 hover:border-cyber-green hover:text-cyber-green transition-all duration-300">
+                    <div class="text-cyber-blue mb-2"><i class="fas fa-phone"></i></div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-mono">Phone</div>
+                    <div class="mt-1 font-mono text-sm">0790399727</div>
+                </a>
+
+                <a href="mailto:zaceswin4@gmail.com" class="block bg-cyber-gray border border-gray-700 rounded-lg p-4 hover:border-cyber-green hover:text-cyber-green transition-all duration-300">
+                    <div class="text-cyber-blue mb-2"><i class="fas fa-envelope"></i></div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-mono">Email</div>
+                    <div class="mt-1 font-mono text-sm">zaceswin4@gmail.com</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/zac-eswin-ab2594358" target="_blank" rel="noreferrer" class="block bg-cyber-gray border border-gray-700 rounded-lg p-4 hover:border-cyber-green hover:text-cyber-green transition-all duration-300">
+                    <div class="text-cyber-blue mb-2"><i class="fab fa-linkedin"></i></div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-mono">LinkedIn</div>
+                    <div class="mt-1 font-mono text-sm">/in/zac-eswin</div>
+                </a>
+            </div>
+
+            <div class="flex justify-center gap-6 text-2xl text-gray-400 mt-10">
+                <a href="https://github.com/zaceswin" target="_blank" rel="noreferrer" class="hover:text-cyber-green transition-colors"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zac-eswin-ab2594358" target="_blank" rel="noreferrer" class="hover:text-cyber-blue transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:zaceswin4@gmail.com" class="hover:text-cyber-blue transition-colors"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm font-mono text-gray-500 border-t border-gray-800">
+        <p>Built by Zack Macharia. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <script>
+        (() => {
+            const canvas = document.getElementById('matrix-bg');
+            if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+
+            const glyphs = 'アカサタナハマヤラワ012345789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]$#';
+            const fontSize = 16;
+            let columns = 0;
+            let drops = [];
+            let animationId = null;
+
+            function resizeMatrix() {
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                canvas.width = Math.floor(window.innerWidth * dpr);
+                canvas.height = Math.floor(window.innerHeight * dpr);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                columns = Math.ceil(window.innerWidth / fontSize);
+                drops = Array.from({ length: columns }, () =>
+                    Math.random() * (window.innerHeight / fontSize)
+                );
+            }
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(10, 10, 10, 0.075)';
+                ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const char = glyphs[Math.floor(Math.random() * glyphs.length)];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+                    
+                    // Fixed the syntax error here
+                    ctx.fillStyle = Math.random() > 0.975
+                        ? 'rgba(190, 255, 220, 0.95)'
+                        : 'rgba(0, 255, 136, 0.72)';
+                    
+                    ctx.fillText(char, x, y);
+
+                    if (y > window.innerHeight && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    } else {
+                        drops[i] += 0.55 + Math.random() * 0.45;
+                    }
+                }
+                animationId = window.requestAnimationFrame(drawMatrix);
+            }
+
+            function startMatrix() {
+                if (animationId === null && !document.hidden) {
+                    animationId = window.requestAnimationFrame(drawMatrix);
+                }
+            }
+
+            function stopMatrix() {
+                if (animationId !== null) {
+                    window.cancelAnimationFrame(animationId);
+                    animationId = null;
+                }
+            }
+
+            resizeMatrix();
+            startMatrix();
+            window.addEventListener('resize', resizeMatrix, { passive: true });
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) stopMatrix();
+                else startMatrix();
+            });
+        })();
+    </script>
 </body>
-322	342	
 </html>
